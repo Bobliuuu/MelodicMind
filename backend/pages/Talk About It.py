@@ -1,4 +1,4 @@
-# Code refactored from OpenAI Chatbot tutorial
+# Code refactored from Vercel Chatbot tutorial
 
 import openai 
 import streamlit as st

@@ -11,7 +11,9 @@ const Home: React.FC = () => {
       <main className="p-8">
         <h1 className="text-3xl font-bold mb-4">Welcome to MelodyMind</h1>
         <p className="text-gray-700 mb-6">
-          Your three step process to improve mental health. 
+          Your three step process to improve mental health!
+          <br />
+          With MelodicMind, 
         </p>
         <div className="mb-6">
           <Image src={Logo} alt="MelodicMind Logo" width={200} height={200} />
@@ -26,10 +28,10 @@ const Home: React.FC = () => {
             <Link href="http://localhost:3000" className="bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded">
                 Chat
             </Link>
-            <a href="http://localhost:8501/creatememory" className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">
+            <a href="http://10.0.0.174:8501/Add_Memory" className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">
                 Create Memory
             </a>
-            <a href="http://localhost:8501/createjournal" className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">
+            <a href="http://http://10.0.0.174:8501/Add_Journal_Entry" className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">
                 Create Journal
             </a>
         </div>

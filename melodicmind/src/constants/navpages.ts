@@ -1,5 +1,5 @@
 export const LINKS = [
     { label: 'Memories', path: '/memories' },
     { label: 'Journal', path: '/journal' },
-    { label: 'Talk', path: '/talk' },
+    { label: 'Chat', path: 'http://localhost:3000' },
   ];

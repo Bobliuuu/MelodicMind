@@ -13,7 +13,6 @@ model = musicgen.MusicGen.get_pretrained('medium', device='cpu')
 model.set_generation_params(duration=5)
 """
 
-# Function to get sentiment colors based on sentiment percentages
 def getColor(dt):
     print(dt['score'])
     score = float(dt['score'])
@@ -39,12 +38,10 @@ def get_audio_file_path(journal_entry):
         return 'sounds/happy.wav'
     return 'sounds/sad.wav'
 
-# Create the "Add a Journal Entry" page
 def add_journal_entry_page():
     st.title('MelodicMind - Add a Journal Entry')
     st.write('Write about your day or an experience you want to journal. Talk about how you\'re feeling')
 
-    # Get user input text
     journal_entry = st.text_area("Enter your journal entry here...", "")
 
     if st.button("Save Entry"):
@@ -61,20 +58,15 @@ def add_journal_entry_page():
             dt = {'label': 'NEGATIVE', 'score': '0.785038509'}
             sentiment_color = getColor(dt)
 
-        # Get sentiment color based on sentiment percentages
         st.success("Journal entry saved successfully!")
 
-        # Display the sentiment color
         st.write("Sentiment Color:")
         rect = Image.new("RGB", (200, 200), sentiment_color)
         st.image(rect, use_column_width=True)
 
-        # Display the audio file
         audio_file_path = get_audio_file_path(journal_entry)
         st.write("Audio file:")
         st.audio(audio_file_path)
-        
-        # Get sentiment
 
         if 'excited' in journal_entry:
             st.success('Sentiment: ' + dt['label'] + '\nScore:' + dt['score'])
