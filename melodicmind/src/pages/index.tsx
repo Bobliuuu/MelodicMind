@@ -13,7 +13,13 @@ const Home: React.FC = () => {
         <p className="text-gray-700 mb-6">
           Your three step process to improve mental health!
           <br />
-          With MelodicMind, 
+          With MelodicMind, you can use our super simple three step process to success! 
+          <br />
+          1. Write an entry in your journal to see how you're feeling! 
+          <br />
+          2. If you're feeling sad, remind yourself of some happy memories, or keepsafe one as an NFT! 
+          <br />
+          3. If you're still feeling down, talk about it with our AI Chatbot! 
         </p>
         <div className="mb-6">
           <Image src={Logo} alt="MelodicMind Logo" width={200} height={200} />
