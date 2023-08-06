@@ -14,5 +14,5 @@ st.image('logo.jpg', caption='MelodicMind Logo', use_column_width=True)
 # List of the three pages
 st.write('## Pages:')
 st.write('1. Add Memory')
-st.write('2. Check Sentiment')
-st.write('3. Journal Entry')
+st.write('2. Add Journal Entry')
+st.write('3. Talk About It')
