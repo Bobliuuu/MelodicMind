@@ -14,7 +14,7 @@ const Home: React.FC = () => {
           Your three step process to improve mental health. 
         </p>
         <div className="mb-6">
-          <Image src={Logo} alt="MelodyMind Logo" width={200} height={200} />
+          <Image src={Logo} alt="MelodicMind Logo" width={200} height={200} />
         </div>
         <div className="flex space-x-4">
             <Link href="/memories" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
