@@ -42,17 +42,14 @@ def get_audio_file_path(journal_entry):
         return 'sounds/happy.wav'
     return 'sounds/sad.wav'
 
-# Create the "Add a Journal Entry" page
 def add_journal_entry_page():
     st.title('MelodicMind - Add a Journal Entry')
     st.write('Write about your day or an experience you want to journal. Talk about how you\'re feeling')
 
-    # Get user input text
     journal_entry = st.text_area("Enter your journal entry here...", "")
 
     if st.button("Save Entry"):
         st.info("Saving your journal entry...")
-        # Here, you can save the journal_entry to your database or any other storage.
         print(journal_entry)
         if 'excited' in journal_entry:
             #dt = sent_pipeline(prompt)
@@ -60,26 +57,19 @@ def add_journal_entry_page():
         else:
             getColor('sad')
 
-        # Get sentiment color based on sentiment percentages
         sentiment_color = getColor(journal_entry)
         st.success("Journal entry saved successfully!")
-
-        # Display the sentiment color
         st.write("Sentiment Color:")
         rect = Image.new("RGB", (200, 200), sentiment_color)
         st.image(rect, use_column_width=True)
 
-        # Display the audio file
         audio_file_path = get_audio_file_path(journal_entry)
         st.write("Audio file:")
         st.audio(audio_file_path)
         
-        # Get sentiment
         if 'excited' in journal_entry:
             st.success('Sentiment: ' + dt['LABEL'] + '\nScore:' + dt['score'])
         else:
             st.failed('Sentiment:' + dt['LABEL'] + '\nScore:' + dt['score'])
         
-
-# Call the function to render the "Add a Journal Entry" page
 add_journal_entry_page()
